@@ -1,0 +1,20 @@
+body {
+    background-color: azure;
+}
+
+
+/*googling helped me create a 3x3 grid of squares*/
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 500px;
+}
+
+.cell {
+    flex: 0 0 32%;                       
+    height: 32%;
+    margin-bottom: 5px;
+    background-color: rgb(70, 66, 66);
+  }
