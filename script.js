@@ -13,6 +13,21 @@ const player = (marker) => {
 
 //Need one displayController, an object that will control the flow of the game, so I'll use a module
 
+
+
 const displayController = (() => {
 
 })();
+
+
+
+//I had left this project for a few weeks, after coming back I was kinda lost on syntax but a bit of googling set me straight :) and thus I could write this function :)
+function renderBoard(){
+    var cell;
+    for(var i = 0;i<gameBoard.board.length;i++){
+        
+        cell = document.querySelector(`#c${i}`);
+        cell.textContent = gameBoard.board[i];
+    }
+}
+renderBoard();

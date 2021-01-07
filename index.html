@@ -3,32 +3,33 @@
 <head>
 
 <link rel="stylesheet" href="styles.css">
-<script src="script.js"></script> <!--Learnt how to link a js file-->
-<!--Now that I have separated html css and js, I reckon the code would look really clean in a separate files!-->
+
 
 <title>Tic Tac Toe</title>
 
 </head>
 <body>
 
+    <!--Start doing point 4: I think I just have to tie up some onclick functions with cells :-) -->
     <div class = 'board'>
 
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+        <div class="cell" id = 'c0'></div>
+        <div class="cell" id = 'c1'></div>
+        <div class="cell" id = 'c2'></div>
+        <div class="cell" id = 'c3'></div>
+        <div class="cell" id = 'c4'></div>
+        <div class="cell" id = 'c5'></div>
+        <div class="cell" id = 'c6'></div>
+        <div class="cell" id = 'c7'></div>
+        <div class="cell" id = 'c8'></div>
 
 
 
     </div>
 
 
-
-
+    <!--Initially I had put the script tag inside the head tag and the doc query selector wasn't working, started working when I put the tag here-->
+    <script src="script.js"></script> <!--Learnt how to link a js file-->
+    <!--Now that I have separated html css and js, I reckon the code would look really clean in a separate files!-->
 </body>
 </html>

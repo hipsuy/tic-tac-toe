@@ -10,11 +10,17 @@ body {
     justify-content: space-around;
     height: 500px;
     width: 500px;
+    
 }
 
 .cell {
     flex: 0 0 32%;                       
     height: 32%;
     margin-bottom: 5px;
-    background-color: rgb(70, 66, 66);
+    background-color: rgb(44, 41, 41);
+    color: wheat;
+    font-size: 700%;
+    text-align: center;
+    
+    
   }
