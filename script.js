@@ -2,6 +2,7 @@
 
 const gameBoard = (() => {  //As I only need one gameBoard object, I am using a module
     let board = ['x','x','x','-','-','-','o','-','o'];  //an array inside the gameBoard object which stores the actual Gameboard
+    
     return {board};
 })();
 
@@ -16,11 +17,21 @@ const player = (marker) => {
 
 
 const displayController = (() => {
-
+    const renderBoard = () => {
+        var cell;
+        for(var i = 0;i<gameBoard.board.length;i++){
+        
+            cell = document.querySelector(`#c${i}`);
+            cell.textContent = gameBoard.board[i];
+        }
+    }
+    return {renderBoard};
 })();
 
 
 
+
+/*
 //I had left this project for a few weeks, after coming back I was kinda lost on syntax but a bit of googling set me straight :) and thus I could write this function :)
 function renderBoard(){
     var cell;
@@ -30,4 +41,7 @@ function renderBoard(){
         cell.textContent = gameBoard.board[i];
     }
 }
-renderBoard();
+
+// Came back after a month of writing the above and put it inside the displayController module, got it working after a few mins :)
+*/
+displayController.renderBoard();
