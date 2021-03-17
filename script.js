@@ -54,6 +54,7 @@ const gameBoard = (() => {  //As I only need one gameBoard object, I am using a 
         
         renderBoard();
         let cell;
+        let display = document.querySelector('.result');
         for(let i = 0;i<board.length;i++){
         
             cell = document.querySelector(`#c${i}`);
@@ -73,16 +74,23 @@ const gameBoard = (() => {  //As I only need one gameBoard object, I am using a 
                     }
                     let result = checkStatus();
                     if(result != undefined){
-                        alert(result);
-                        currentMarker = 'x';
-                         for(let i = 0 ;i<board.length;i++){ // will chuck this part into onlick handler for a button which restarts
-                            board[i] = ' ';
-                        }
-                        renderBoard();
+                        
+                        display.textContent = result;
+                        
                     }
                     
             });
         }
+
+        let restartButton = document.querySelector('.restart');
+        restartButton.addEventListener('click', ()=> {
+            currentMarker = 'x';
+            for(let i = 0 ;i<board.length;i++){ 
+            board[i] = ' ';
+            }
+            renderBoard();
+            display.textContent = '';
+        });
 
     }
     return {setup};
@@ -90,8 +98,9 @@ const gameBoard = (() => {  //As I only need one gameBoard object, I am using a 
 
 
 //Need multiple players, so I will use a factory instead of a module
-const player = (marker) => {
+const player = (marker,name) => {
     const playerMarker = marker;
+    const playerName = name;
 };
 
 
